@@ -4,6 +4,7 @@
 *.tfstate.*
 crash.log
 terraform.tfvars.local
+terraform.tfvars
 
 # macOS
 .DS_Store
