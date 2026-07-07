@@ -20,9 +20,8 @@ triphoria-devops-assessment/
 │
 ├── database/
 │   ├── docker-compose.yml
-│   ├── init.sql
+│   ├── indexes.sql
 │   ├── seed.sql
-│   └── indexes.sql
 │
 ├── scripts/
 │   ├── backup.sh
