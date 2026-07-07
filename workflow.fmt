@@ -1,0 +1,70 @@
+triphoria-devops-assessment/
+│
+├── infra/
+│   ├── modules/
+│   │   ├── network/
+│   │   ├── ecs/
+│   │   └── rds/
+│   │
+│   └── envs/
+│       ├── dev/
+│       │   ├── main.tf
+│       │   ├── variables.tf
+│       │   ├── terraform.tfvars
+│       │   ├── backend.tf
+│       │   └── outputs.tf
+            └── versions.tf
+│       │
+│       └── prod/
+│           ├── main.tf
+│           ├── variables.tf
+│           ├── terraform.tfvars
+│           ├── backend.tf
+│           └── outputs.tf
+            └── versions.tf
+│
+├── database/
+│   ├── migrations/
+│   │   └── tables.sql
+│   │
+│   ├── seeds/
+│   │   └── seed.sql
+│   │
+│   └── indexes.sql
+│
+├── docker-compose.yml
+│
+├── scripts/
+│   ├── backup.sh
+│   └── restore.sh
+│
+├── .github/
+│   └── workflows/
+│       └── terraform.yml
+│
+└── README.md
+
+
+. Project structure and Terraform initialization
+. Network module (VPC, subnets, IGW, NAT, route tables)
+. ECS module (ALB, ECS Cluster, Task Definition, Service, Security Groups)
+. RDS module (PostgreSQL, subnet group, security group)
+. Development environment (infra/envs/dev)
+. Production environment (infra/envs/prod)
+. Docker Compose for PostgreSQL
+. SQL migrations
+. Seed data (100+ records)
+. Index optimization
+. Backup & restore scripts
+. GitHub Actions
+. README
+. GitHub push & verification
+
+
+---
+"In Step 1, I organized the Terraform project into reusable modules for the network, ECS, and RDS components.
+ I also separated the infrastructure into dev and prod environments so the same modules can be reused with different configurations. 
+ Each environment contains files for provider versions, backend state configuration, variables, environment-specific values, module invocation, and outputs. 
+ This modular structure improves maintainability, scalability, and follows Terraform best practices for production deployments."
+
+--

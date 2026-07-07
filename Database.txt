@@ -1,0 +1,23 @@
+docker compose up -d
+    .   Creating network "database_default"
+
+    .   Creating volume "database_postgres_data"
+
+    .   Creating triphoria-postgres
+
+    .   Started
+
+Connect to PostgreSQL
+    .   docker exec -it triphoria-postgres psql -U admin -d triphoria
+    Verify Tables
+        .   \dt 
+    View Schema
+        .   \d hotel_bookings
+        .   \d booking_events
+    Insert data
+        .   docker exec -i triphoria-postgres psql -U admin -d triphoria < sample_data.sql
+        .   SELECT * FROM hotel_bookings;
+        .   docker exec -it triphoria-postgres psql -U admin -d triphoria -c "SELECT * FROM hotel_bookings;
+    Stop the Database
+        .   docker compose down
+        .   docker compose down -v
